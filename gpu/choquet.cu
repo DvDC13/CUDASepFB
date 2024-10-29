@@ -3,3 +3,8 @@
 //
 
 #include "choquet.cuh"
+
+std::shared_ptr<Image<bool>> computeChoquet_gpu(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image)
+{
+    
+}

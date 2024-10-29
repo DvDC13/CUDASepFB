@@ -2,8 +2,11 @@
 // Created by david on 29/10/24.
 //
 
-#ifndef COMPUTATION_CUH
-#define COMPUTATION_CUH
+#ifndef CHOQUET_CUH
+#define CHOQUET_CUH
 
+#include "computation.cuh"
 
-#endif //COMPUTATION_CUH
+std::shared_ptr<Image<bool>> computeChoquet_gpu(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image);
+
+#endif //CHOQUET_CUH

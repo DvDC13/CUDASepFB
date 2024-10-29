@@ -15,7 +15,7 @@ std::shared_ptr<Image<uint8_t>> getBitVector(std::shared_ptr<Image<Pixel>> image
   return result;
 }
 
-std::shared_ptr<Image<bool>> computeChoquet(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image)
+std::shared_ptr<Image<bool>> computeChoquet_cpu(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image)
 {
   int height = image->height();
   int width = image->width();

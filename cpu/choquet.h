@@ -7,6 +7,6 @@
 
 #include "computation.h"
 
-std::shared_ptr<Image<bool>> computeChoquet(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image);
+std::shared_ptr<Image<bool>> computeChoquet_cpu(std::shared_ptr<Image<Pixel>> background, std::shared_ptr<Image<Pixel>> image);
 
 #endif //CHOQUET_H

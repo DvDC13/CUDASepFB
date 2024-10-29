@@ -21,7 +21,7 @@ Pixel getColorSimilarityMeasures(Pixel pixel1, Pixel pixel2)
 
 float toGrayScale(Pixel pixel)
 {
-  return -1.299 * pixel[0] + 0.587 * pixel[1] + 0.114 * pixel[2];
+  return 0.299f * pixel[0] + 0.587f * pixel[1] + 0.114f * pixel[2];
 }
 
 uint8_t isBorder(std::shared_ptr<Image<Pixel>> image, int x, int y)
@@ -34,7 +34,7 @@ uint8_t isBorder(std::shared_ptr<Image<Pixel>> image, int x, int y)
 
 uint8_t getTexFeaturesExtraction(std::shared_ptr<Image<Pixel>> image, int x, int y)
 {
-  uint8_t texFeaturesVec;
+  uint8_t texFeaturesVec = 0;
 
   float grayScale = toGrayScale(image->at(x, y));
 
@@ -55,6 +55,7 @@ float getTexSimilarityMeasures(uint8_t vector1, uint8_t vector2)
   uint8_t similarity = ~(vector1 ^ vector2);
   return __builtin_popcount(similarity) / 8.0f;
 }
+
 
 void swap(float &a, float &b)
 {

@@ -48,7 +48,7 @@ int main() {
     for (int i = 1; i < capturedImages.size(); i++)
     {
         cv::Mat frame;
-        std::shared_ptr<Image<bool>> result_first_pass = computeChoquet(capturedImages[0], capturedImages[i]);
+        std::shared_ptr<Image<bool>> result_first_pass = computeChoquet_cpu(capturedImages[0], capturedImages[i]);
         result_first_pass->save("camera_test/" + std::to_string(i) + "_first_pass.ppm");
         cv::imread("camera_test/" + std::to_string(i) + "_first_pass.ppm").copyTo(frame);
         writer << frame;
