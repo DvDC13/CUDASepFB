@@ -4,17 +4,6 @@
 
 #include "computation.h"
 
-Pixel RGBtoYCrCb(Pixel pixel)
-{
-  Pixel yCrCb;
-
-  yCrCb[0] = 0.25 * pixel[0] + 0.504 * pixel[1] + 0.098 * pixel[2] + 16;
-  yCrCb[1] = 0.439 * pixel[0] - 0.368 * pixel[1] - 0.071 * pixel[2] + 128;
-  yCrCb[2] = -0.148 * pixel[0] - 0.291 * pixel[1] + 0.439 * pixel[2] + 128;
-
-  return yCrCb;
-}
-
 Pixel getColorSimilarityMeasures(Pixel pixel1, Pixel pixel2)
 {
   Pixel similarityMeasures;

@@ -8,8 +8,6 @@
 #include "constants.h"
 #include "image.h"
 
-Pixel RGBToYCrCb(Pixel pixel);
-
 Pixel getColorSimilarityMeasures(Pixel pixel1, Pixel pixel2);
 
 uint8_t getTexFeaturesExtraction(std::shared_ptr<Image<Pixel>> image, int x, int y);
