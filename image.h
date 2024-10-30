@@ -20,6 +20,9 @@ public: // public member
     inline int height() const { return height_; }
     inline std::vector<T> data() const { return data_; }
 
+    inline void set_data(const T* data) { data_ = std::vector<T>(data, data + width_ * height_); }
+    inline void set_data(const std::vector<T>& data) { data_ = data; }
+
     const T& at(int x, int y) const;
     T& operator()(int x, int y) { return at(x, y); }
     const T& operator()(int x, int y) const { return at(x, y); }
